@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Submission</title>
+    <link rel="stylesheet" href="form/css/bootstrap.min.css">
+    <link rel="stylesheet" href="form/css/all.min.css">
+    <link rel="stylesheet" href="form/css/bondi.css">
+    <!--  -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-area">
+            <div class="image-container">
+                <img src="logo2.png" alt="Logo">
+                <img src="menu/tramisu-nobg.png" alt="Pasta">
+            </div>
+            <form id="userForm" class="form-container">
+                <p><h4><B> SIGN UP TO FLAVOR HUB</B></h4></p>
+                <div class="mb-3">
+                    <label for="exampleInputName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="exampleInputName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" required>
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" required>
+                </div>
+                <select class="form-select mb-3" id="select" required>
+                    <option value="" disabled selected>Select your city</option>
+                    <option value="Tanta">Tanta</option>
+                    <option value="Cairo">Cairo</option>
+                    <option value="Alex">Alex</option>
+                </select>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Welcome Message Div -->
+        <div id="welcomeMessage"></div>
+    </div>
+
+    <script>
+        document.getElementById('userForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var full_name = document.getElementById("exampleInputName").value;
+
+            const p = document.getElementById("welcomeMessage");
+            p.innerHTML = `
+                <h1>Welcome ${full_name}</h1>
+                <button type="button" class="btn btn-secondary" id="butt">Back to Home</button>`;
+            document.getElementById('butt').onclick = function () {
+                window.location.href = 'project.html'; // Change 'project.html' to your actual home page
+            };
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+body {
+    margin: 50px;
+    background-color: #ebdbc8;
+}
+
+.container {
+    display: flex;
+    background-color: #e3502734;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.recipe {
+    width: 55%;
+}
+
+.photo {
+    width: 45%;
+    margin-left: 40px;
+}
+
+.photo img {
+    width: 650px;
+    margin-top: 80px;
+}
+
+.heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: #e35027;
+}
+
+.parag {
+    font-size: 22px;
+    line-height: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 50px;
+}* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipe {
+    max-width: 800px;
+    width: 100%;
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+    color: #333;
+}
+
+.parag {
+    margin-bottom: 20px;
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.photo {
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (min-width: 600px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .recipe {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    .photo {
+        flex: 0 0 500px;
+     
+    }
+}.back_button{
+    position: absolute;
+  
+        top: 10px;
+ 
+        right: 10px;
+        
+        border: none;
+     
+        border-radius: 5px;
+       
+        padding: 30px 19px;
+      
+    
+    
+      
+}
